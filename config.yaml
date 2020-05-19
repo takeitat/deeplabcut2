@@ -1,0 +1,64 @@
+# Project definitions (do not edit)
+Task: task2
+scorer: name2
+date: May15
+
+# Project path (change when moving around)
+project_path: C:\Users\taket\task2-name2-2020-05-15
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets: 
+ C:\Users\taket\task2-name2-2020-05-15\videos\training_sample2.mp4:
+   crop: 0, 1280, 0, 720
+bodyparts:
+- nose
+- forefoot_right_toe
+- forefoot_right_groin
+- forefoot_left_toe
+- forefoot_left_groin
+- back
+- hindfoot_right_toe
+- hindfoot_right_groin
+- hindfoot_left_toe
+- hindfoot_left_groin
+- tail_root
+- tail_end
+start: 0
+stop: 1
+numframes2pick: 250
+
+# Plotting configuration
+skeleton:
+- - bodypart1
+  - bodypart2
+- - objectA
+  - bodypart3
+skeleton_color: black
+pcutoff: 0.6
+dotsize: 12
+alphavalue: 0.7
+colormap: jet
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+resnet:
+snapshotindex: -1
+batch_size: 8
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+default_net_type: resnet_50
+default_augmenter: default
